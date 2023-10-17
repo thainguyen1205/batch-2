@@ -1,0 +1,1 @@
+http://foundry.mediumra.re/page-register.html

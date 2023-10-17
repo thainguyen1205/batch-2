@@ -1,0 +1,22 @@
+@media screen and (max-width: 280px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        .content__toppar{
+            
+            justify-content: center;
+            
+        }
+    }
+        
+    .card--box{
+      width: 100%;
+  
+      .card--box__img{
+        width: 200px;
+        width: 100%;
+      }
+    }
+  }

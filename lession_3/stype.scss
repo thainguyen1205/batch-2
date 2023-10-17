@@ -1,0 +1,47 @@
+.Trend{
+    padding: 9px;
+    // display: flex;
+    position: relative;
+    &__main{
+        width: 687px;
+        height: 464px;
+    }
+    &__picture{
+        width: 100%;
+        aspect-ratio: 3/2;
+        // height: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+
+.box{
+        position: absolute;
+        top: -10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+
+        &__catory{
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        
+        &__title{
+            margin-top: 0;
+            font-size: 60px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &__btn{
+            padding: 14px 48px;
+            text-transform: uppercase;
+            border-radius: 25px;
+            font-weight: bold;
+            background:#fff;
+            align-items: center;
+        }
+    }
+
+}

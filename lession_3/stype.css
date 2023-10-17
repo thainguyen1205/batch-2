@@ -1,0 +1,41 @@
+.Trend {
+  padding: 9px;
+  position: relative;
+}
+.Trend__main {
+  width: 687px;
+  height: 464px;
+}
+.Trend__picture {
+  width: 100%;
+  aspect-ratio: 3/2;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Trend .box {
+  position: absolute;
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.Trend .box__catory {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.Trend .box__title {
+  margin-top: 0;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.Trend .box__btn {
+  padding: 14px 48px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: bold;
+  background: #fff;
+  align-items: center;
+}/*# sourceMappingURL=stype.css.map */
