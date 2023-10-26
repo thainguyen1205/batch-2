@@ -1,3 +1,8 @@
+:root {
+  --gap: 30px;
+  --number: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +10,14 @@
 }
 
 .main {
+  max-width: 1320px;
+  margin: auto;
+
   &__title {
     display: flex;
+    align-items: center;
     margin-bottom: 84px;
+
     h2 {
       color: #101010;
       font-size: 34px;
@@ -26,23 +36,23 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    // justify-content: space-around;
 
     .cart {
       border-radius: 24px;
       background: #f6f6f6;
       padding: 20px 30px;
       position: relative;
-      width: 270px;
-      height: 130px;
+      min-width: 270px;
+      
       img {
         width: 114px;
-        height: 117px;
+        
         object-fit: cover;
         position: absolute;
         bottom: 32px;
         right: 26px;
       }
+
       &__box {
         .box__name {
           color: #171717;
@@ -51,6 +61,7 @@
           font-weight: 700;
           line-height: 24px; /* 100% */
           letter-spacing: -0.24px;
+          margin-bottom: 16px;
         }
         .box__title {
           color: #969696;
@@ -71,4 +82,92 @@
   }
 }
 
+@mixin media-sm-down(){
+  @media only screen and (max-width: 576px) {
+    @content
+  }
+}
 
+@mixin media-sm-up(){
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-md-up(){
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg-up(){
+  @media only screen and (min-width: 992px){
+    @content;
+  }
+}
+
+@mixin media-xl-up(){
+  @media only screen and (min-width: 1200px){
+    @content;
+  }
+}
+
+@mixin media-xxl-up(){
+  @media only screen and (min-width: 1400px){
+    @content;
+  }
+}
+
+@include media-sm-down(){
+  .main__content{
+    width: 100%;
+  }
+  .cart{
+    width: calc((100% - (var(--gap) * (var(--number) - 1))) / var(--number));
+  }
+}
+
+@include media-sm-up(){
+  // .main__content{
+  //   max-width: 540px;
+  // }
+    .main{
+      max-width: 540px;
+    }
+  .cart{
+    width: calc((100% - (var(--gap) * (var(--number) - 1))) / var(--number));
+  }
+}
+
+@include media-md-up() {
+  .main{
+    max-width: 720px;
+  }
+  :root{
+    --number: 2;
+  }
+}
+
+@include media-lg-up(){
+  .main{
+    max-width: 960px;
+  }
+}
+
+@include media-xl-up(){
+  .main{
+    max-width: 1140px;
+  }
+  :root{
+    --number: 3;
+  }
+}
+
+@include media-xxl-up(){
+  .main{
+    max-width: 1320px;
+  }
+  :root{
+    --number: 4;
+  }
+}
