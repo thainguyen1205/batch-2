@@ -8,21 +8,24 @@ body {
   background-image: url("./icon/body.jpg");
 }
 
-.main {
+.container {
+  margin: auto;
+}
+.container .main {
   display: flex;
   margin-top: 150px;
   padding: 0 20px;
   position: relative;
   justify-content: center;
 }
-.main-left {
+.container .main-left {
   display: flex;
   border-radius: 20px;
   background: #FFF;
   flex-direction: column;
-  height: 734px;
+  height: 100%;
 }
-.main-left .avatar {
+.container .main-left .avatar {
   margin: 0 auto;
   width: 240px;
   height: 240px;
@@ -30,13 +33,13 @@ body {
   overflow: hidden;
   margin-top: -100px;
 }
-.main-left .avatar img {
+.container .main-left .avatar img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main-left h3 {
+.container .main-left h3 {
   color: #000;
   text-align: center;
   font-family: Roboto Slab;
@@ -47,7 +50,7 @@ body {
   padding: 0 60px;
   margin-top: 20px;
 }
-.main-left .introduce {
+.container .main-left .introduce {
   display: inline-flex;
   justify-content: center;
   padding: 5px 15px;
@@ -61,16 +64,16 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-.main-left .icon-max {
+.container .main-left .icon-max {
   display: flex;
   justify-content: center;
 }
-.main-left .icon {
+.container .main-left .icon {
   display: flex;
   justify-content: space-around;
   gap: 10px;
 }
-.main-left .icon a {
+.container .main-left .icon a {
   display: flex;
   width: 50px;
   height: 50px;
@@ -80,56 +83,56 @@ body {
   justify-content: center;
   align-items: center;
 }
-.main-left .information {
+.container .main-left .information {
   border-radius: 16px;
   background: #F3F6F6;
   margin: 30px 30px;
 }
-.main-left .information .chapter {
+.container .main-left .information .chapter {
   display: flex;
   padding: 10px;
   position: relative;
 }
-.main-left .information .chapter-icon {
+.container .main-left .information .chapter-icon {
   margin-right: 10px;
   padding: 22px;
   border-radius: 8px;
   background: #FFF;
 }
-.main-left .information .chapter .phone {
+.container .main-left .information .chapter .phone {
   width: 14px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-left .information .chapter .email {
+.container .main-left .information .chapter .email {
   width: 22px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-left .information .chapter .location {
+.container .main-left .information .chapter .location {
   width: 17px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-left .information .chapter .calendar {
+.container .main-left .information .chapter .calendar {
   width: 20px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-left .information .chapter .communications {
+.container .main-left .information .chapter .communications {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.main-left .information .chapter .communications p {
+.container .main-left .information .chapter .communications p {
   color: #44566C;
   font-family: Poppins;
   font-size: 12px;
@@ -137,7 +140,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.main-left .information .chapter .communications span {
+.container .main-left .information .chapter .communications span {
   color: #000;
   font-family: Poppins;
   font-size: 16px;
@@ -145,7 +148,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.main-left .information .chapter:not(.chapter:last-child):before {
+.container .main-left .information .chapter:not(.chapter:last-child):before {
   content: "";
   position: absolute;
   width: 80%;
@@ -155,11 +158,11 @@ body {
   bottom: 0;
   background-color: rgba(51, 51, 51, 0.1529411765);
 }
-.main-left .button {
+.container .main-left .button {
   display: flex;
   justify-content: center;
 }
-.main-left button {
+.container .main-left button {
   display: flex;
   padding: 14px 30px;
   justify-content: center;
@@ -171,7 +174,7 @@ body {
   border: none;
   margin-bottom: 40px;
 }
-.main-left button span {
+.container .main-left button span {
   color: #FFF;
   font-family: Poppins;
   font-size: 18px;
@@ -180,11 +183,10 @@ body {
   line-height: normal;
   padding-top: 4px;
 }
-.main-right {
-  width: 850px;
+.container .main-right {
   position: relative;
 }
-.main-right .navbar {
+.container .main-right .navbar {
   background-color: #FFF;
   position: absolute;
   top: 0;
@@ -193,9 +195,9 @@ body {
   display: flex;
   border-radius: 16px;
 }
-.main-right .navbar .about {
+.container .main-right .navbar .about {
   display: flex;
-  padding: 32px;
+  padding: 17px 22px 15px 22px;
   border-radius: 12px;
   background: #F3F6F6;
   flex-direction: column;
@@ -207,85 +209,86 @@ body {
   color: #000;
   text-decoration: none;
 }
-.main-right .navbar .about > img {
+.container .main-right .navbar .about > img {
   width: 30px;
   height: 25px;
 }
-.main-right .navbar .about > p {
+.container .main-right .navbar .about > p {
   font-size: 0.725rem;
   margin-top: 7px;
 }
-.main-right .navbar .about:last-child {
+.container .main-right .navbar .about:last-child {
   margin-right: 0;
 }
-.main-right .navbar .about:hover {
+.container .main-right .navbar .about:hover {
   background-color: #E3E3E3;
 }
-.main-right .top {
+.container .main-right .top {
   background-color: #FFF;
   margin-left: 50px;
   border-radius: 20px;
   padding: 30px 0 30px 40px;
   margin-top: 200px;
 }
-.main-right .top .aboutme {
+.container .main-right .top .aboutme {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
-.main-right .top .aboutme > h2 {
+.container .main-right .top .aboutme h2 {
   color: #000;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
 }
-.main-right .top .aboutme .line {
+.container .main-right .top .aboutme .line {
   width: 200px;
   height: 3px;
   background: linear-gradient(90deg, #FA5252 0%, #DD2476 100%);
   margin-left: 30px;
   border-radius: 16px;
 }
-.main-right .top .top1 {
+.container .main-right .top .top1 {
   margin-bottom: 20px;
 }
-.main-right .top .bottom1 {
-  margin-bottom: 60px;
+.container .main-right .top .bottom1 {
+  margin-bottom: 30px;
 }
-.main-right .experience {
+.container .main-right .experience {
   display: flex;
-  gap: 20px;
+  justify-content: space-around;
 }
-.main-right .experience .education .title {
+.container .main-right .experience .education .title {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
   gap: 5px;
 }
-.main-right .experience .education .title h2 {
+.container .main-right .experience .education .title h2 {
   color: #000;
   font-style: normal;
   font-weight: 700;
 }
-.main-right .experience .education .title img {
+.container .main-right .experience .education .title img {
   width: 40px;
   height: 30px;
 }
-.main-right .experience .education .chapter {
+.container .main-right .experience .education .chapter {
   border-radius: 12px;
   background: #FFF4F4;
-  padding: 15px 20px;
+  padding: 15px 15px 15px 20px;
   margin-bottom: 20px;
-  width: 350px;
-  height: 120px;
 }
-.main-right .experience .education .blue {
+.container .main-right .experience .education .blue {
   background: #EEF5FA;
 }
-.main-right .experience .education .violet {
+.container .main-right .experience .education .violet {
   background: #FCF4FF;
 }
-.main-right .Knowledges > h2 {
+.container .main-right .experience .education-left {
+  padding-right: 20px;
+}
+.container .main-right .Knowledges > h2 {
   color: #000;
   font-size: 35px;
   font-style: normal;
@@ -293,13 +296,13 @@ body {
   line-height: normal;
   margin-top: 60px;
 }
-.main-right .Knowledges .tab {
+.container .main-right .Knowledges .tab {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
 }
-.main-right .Knowledges .tab p {
+.container .main-right .Knowledges .tab p {
   color: #44566C;
   font-size: 20px;
   font-style: normal;
@@ -309,26 +312,26 @@ body {
   border-radius: 8px;
   background: #EDF2F2;
 }
-.main-right .bottom {
+.container .main-right .bottom {
   margin-top: 30px;
   background: #F8FBFB;
   padding: 40px 30px;
 }
-.main-right .bottom h1 {
+.container .main-right .bottom h1 {
   text-align: center;
   font-size: 35px;
   color: #000;
   font-style: normal;
   font-weight: 700;
 }
-.main-right .bottom .img {
+.container .main-right .bottom .img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   margin-top: 30px;
 }
-.main-right .last {
+.container .main-right .last {
   color: #44566C;
   text-align: center;
   font-size: 20px;
